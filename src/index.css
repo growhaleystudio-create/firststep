@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fresh Kicks Design System - Urban Streetwear Editorial */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 7.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7.1%;
+
+    /* Electric Blue Primary - Updated to #0369b4 */
+    --primary: 205 97% 36%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Deep Black for CTAs */
+    --secondary: 0 0% 7.1%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 20% 98%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 205 97% 36%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 205 97% 36%;
+
+    --radius: 0.5rem;
+
+    /* Fresh Kicks Custom Tokens */
+    --electric-blue: 205 97% 36%;
+    --deep-black: 0 0% 7.1%;
+    --light-grey: 210 20% 98%;
+    --star-yellow: 45 93% 58%;
+    --section-bg: 210 20% 98%;
+  }
+
+  .dark {
+    --background: 0 0% 7.1%;
+    --foreground: 210 40% 98%;
+    --card: 0 0% 7.1%;
+    --card-foreground: 210 40% 98%;
+    --popover: 0 0% 7.1%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 205 97% 45%;
+    --primary-foreground: 0 0% 7.1%;
+    --secondary: 0 0% 100%;
+    --secondary-foreground: 0 0% 7.1%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 213 27% 84%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Ensure dropdowns appear above other elements */
+  [data-radix-popper-content-wrapper] {
+    z-index: 50 !important;
+  }
+}
+
+@layer components {
+
+  /* Pill-shaped section headers */
+  .pill-header {
+    @apply inline-flex items-center px-6 py-2.5 bg-primary text-primary-foreground rounded-full font-bold text-xs tracking-[0.2em] uppercase shadow-md shadow-blue-900/10;
+  }
+
+  /* Pill-shaped buttons */
+  .btn-pill {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-semibold text-sm tracking-wide transition-all duration-300;
+  }
+
+  .btn-pill-primary {
+    @apply btn-pill bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-blue-900/20;
+  }
+
+  .btn-pill-outline {
+    @apply btn-pill border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground;
+  }
+
+  .btn-pill-blue {
+    @apply btn-pill bg-primary text-primary-foreground hover:bg-primary/90;
+  }
+
+  /* Feature icon circle */
+  .feature-icon {
+    @apply w-16 h-16 rounded-full bg-secondary flex items-center justify-center text-secondary-foreground;
+  }
+
+  /* Review card */
+  .review-card {
+    @apply bg-card rounded-2xl p-6 shadow-xl shadow-black/5 border border-border;
+  }
+
+  /* Gallery overlay */
+  .gallery-overlay {
+    @apply absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300;
+  }
+
+  /* Material label */
+  .material-label {
+    @apply absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6 text-white font-bold text-sm tracking-[0.15em] uppercase;
+  }
+
+  /* Editorial watermark text */
+  .watermark-text {
+    @apply absolute text-[20vw] font-black text-muted/50 tracking-tighter select-none pointer-events-none leading-none;
+  }
+
+  /* Service price with dotted leader */
+  .price-leader {
+    @apply flex-1 border-b-2 border-dotted border-muted-foreground/30 mx-4 mb-1;
+  }
+
+  /* Process step connector */
+  .step-connector {
+    @apply hidden md:block absolute top-8 left-full w-full border-t-2 border-dashed border-muted-foreground/40;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply py-20 md:py-28;
+  }
+
+  .container-padding {
+    @apply px-5 md:px-8 lg:px-16;
+  }
+
+  .text-display {
+    @apply text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.95];
+  }
+
+  .text-headline {
+    @apply text-3xl md:text-4xl font-bold tracking-tight;
+  }
+}
