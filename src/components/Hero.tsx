@@ -3,29 +3,29 @@ import sneakerImage from "@/assets/sneaker-floating.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] bg-background overflow-hidden flex flex-col justify-between">
+    <section id="home" className="relative min-h-[90vh] bg-background overflow-hidden flex flex-col justify-between">
       {/* Brutalism Layout: Huge Sneaker Background + Overlapping Content */}
-      <div className="relative z-20 max-w-7xl mx-auto w-full px-5 md:px-8 lg:px-12 pt-8 md:pt-16 lg:pt-20 h-full flex flex-col justify-between">
+      <div className="relative z-20 max-w-7xl mx-auto w-full px-5 md:px-8 lg:px-12 pt-32 md:pt-40 lg:pt-48 h-full flex flex-col justify-between">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center h-full gap-8 lg:gap-12 pointer-events-none">
 
           {/* Left Side - Headline & CTA (Pointer events auto to allow clicking) */}
           <div className="flex-1 max-w-3xl pointer-events-auto z-30 mix-blend-difference lg:mix-blend-normal text-primary lg:text-primary">
             {/* Reduced Font Size: was text-[7rem]/[8rem], now max text-7xl/8xl roughly */}
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tighter leading-[0.9] mb-8 text-left">
-              Discover
+              Simple
               <br />
-              New Life
+              Care
               <br />
-              <span className="text-muted-foreground/80">for Your</span>
+              <span className="text-muted-foreground/80">for everyday</span>
               <br />
-              Dirty Kicks.
+              Steps.
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground max-w-lg mb-10 leading-relaxed font-medium">
-              Professional care and premium treatment for every shoe material. We bring back the fresh.
-            </p>
+              Because every great
+              <br /> journey begins with a First Step. </p>
 
-            <div className="flex flex-col items-start gap-6">
+            <div className="flex flex-col items-start gap-6 mb-10">
               <a
                 href="#services"
                 className="inline-flex items-center gap-4 bg-primary text-primary-foreground pl-8 pr-2 py-2 rounded-full font-bold text-lg hover:bg-primary/90 transition-all duration-300 group shadow-lg shadow-blue-900/20"

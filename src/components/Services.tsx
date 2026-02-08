@@ -8,32 +8,39 @@ interface ServiceItem {
 
 interface ServiceCategory {
   title: string;
+  subtitle?: string;
   items: ServiceItem[];
 }
 
 const services: ServiceCategory[] = [
   {
-    title: "DEEP CLEANING",
+    title: "Reguler Fast Clean",
+    subtitle: "Upper · Midsole Only",
     items: [
-      { name: "1 PASANG SEPATU", price: "85K", description: "Deep clean jenis dan bahan sandal/sepatu (kecuali boots)" },
-      { name: "2-3 PASANG SEPATU (HARGA PER PASANG)", price: "80K", description: "Deep clean semua jenis dan bahan sandal/sepatu (kecuali boots)" },
-      { name: "4+ PASANG SEPATU (HARGA PER PASANG)", price: "75K", description: "Deep clean semua jenis dan bahan sandal/sepatu (kecuali boots)" },
-      { name: "1 PASANG SEPATU BOOTS / HIGH BOOTS", price: "95K / 105K", description: "Deep clean semua jenis dan bahan sepatu boots" },
-      { name: "2+ PASANG SEPATU BOOTS / HIGH BOOTS", price: "@90K / @100K", description: "Deep clean semua jenis dan bahan sepatu boots" },
-      { name: "LEATHER TREATMENT SEPATU / BOOTS KULIT", price: "+10K / +15K", description: "Special polished treatment dari Saphir Medaille D'or Paris" },
-      { name: "SEPATU ANAK", price: "60K", description: "Deep clean semua jenis dan bahan sepatu anak (maksimal size 33)" },
-      { name: "BAG", price: "150-300K", description: "Let's clean your backpack, totebag, sling bag, etc!" },
-      { name: "ONE DAY SERVICE SEPATU DEWASA / ANAK", price: "100K / 75K", description: "Drop your shoes today & get them cleaned by tomorrow!" },
+      { name: "Canvas / Mesh", price: "30K" },
     ],
   },
   {
-    title: "ADDITIONAL CARE",
+    title: "Deep Clean Treatment",
+    subtitle: "Upper · Midsole · Outsole · Insole · Laces",
     items: [
-      { name: "UNYELLOWING MIDSOLE", price: "95K", description: "Get rid of the yellow shoes midsole (exclude cleaning)." },
-      { name: "REPAIR SOLE LEPAS", price: "105K", description: "Repair untuk midsole/outsole sepatu yang lepas" },
-      { name: "REPAIR LAINNYA (SEPATU &TAS)", price: "185k - 295k", description: "Seperti pergantian karet,sole /dll (silakan dikonsultasikan dahulu)" },
-      { name: "REPAINT", price: "150-300K", description: "Restoring color and vibrancy to your worn-out shoes." },
+      { name: "Canvas / Mesh", price: "35K" },
+      { name: "Suede / Leather", price: "40K" },
+      { name: "White Shoes", price: "45K" },
     ],
+  },
+  {
+    title: "Additional Care",
+    items: [
+      { name: "Kids Shoes", price: "25K" },
+      { name: "Hat", price: "25K" },
+      { name: "Bag", price: "40K – 50K" },
+    ],
+  },
+  {
+    title: "Free Pick Up & Delivery",
+    subtitle: "Bandung City (±5 km) · Min. 2 pairs",
+    items: [],
   },
 ];
 
@@ -47,46 +54,53 @@ const Services = () => {
           {services.map((category) => (
             <div key={category.title}>
               {/* Category Header with Blue Line */}
-              <div className="flex items-center mb-8">
-                <span className="inline-block px-8 py-2 bg-primary text-primary-foreground rounded-full text-sm font-black tracking-widest uppercase z-10">
-                  {category.title}
-                </span>
-                <div className="h-[2px] bg-primary flex-grow -ml-4"></div>
+              <div className="flex flex-col items-start mb-8">
+                <div className="flex items-center w-full">
+                  <span className="inline-block px-8 py-2 bg-primary text-primary-foreground rounded-full text-sm font-black tracking-widest uppercase z-10 whitespace-nowrap">
+                    {category.title}
+                  </span>
+                  <div className="h-[2px] bg-primary flex-grow -ml-4"></div>
+                </div>
+                {category.subtitle && (
+                  <p className="text-muted-foreground font-medium mt-3 ml-2 md:ml-4 text-lg">
+                    {category.subtitle}
+                  </p>
+                )}
               </div>
 
               {/* Service Items */}
-              <div className="space-y-8 pl-2 md:pl-4">
-                {category.items.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex flex-col md:flex-row md:items-end justify-between gap-2 md:gap-4 group"
-                  >
-                    <div className="flex-1">
+              {category.items.length > 0 && (
+                <div className="space-y-6 pl-2 md:pl-4">
+                  {category.items.map((item, index) => (
+                    <div
+                      key={index}
+                      className="flex items-end justify-between gap-4 group border-b border-dashed border-border/50 pb-2"
+                    >
                       <h3 className="font-bold text-foreground text-lg uppercase tracking-tight group-hover:text-primary transition-colors">
                         {item.name}
                       </h3>
-                      {item.description && (
-                        <p className="text-muted-foreground text-sm mt-1 max-w-xl">
-                          {item.description}
-                        </p>
-                      )}
-                    </div>
 
-                    <div className="flex items-end gap-2 md:w-auto w-full justify-between md:justify-end">
-                      {/* <span className="price-leader md:block hidden" /> */}
                       <span className="font-bold text-foreground text-xl tabular-nums whitespace-nowrap">
                         {item.price}
                       </span>
                     </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>
+        {/* Pricelist Image */}
+        <div className="flex justify-center px-4 max-w-5xl mx-auto">
+          <img
+            src="/Pricelist.jpeg"
+            alt="Service Pricelist"
+            className="w-full h-auto rounded-2xl border border-white/20 hover:scale-[1.01] transition-transform duration-500"
+          />
+        </div>
 
         {/* CTA */}
-        <div className="text-center mt-20">
+        <div className="text-center">
           <a href="https://wa.me/6281234567890" target="_blank" className="btn-pill-primary text-lg px-10 py-4 shadow-xl shadow-blue-900/20">
             CUSTOMER REVIEWS
           </a>

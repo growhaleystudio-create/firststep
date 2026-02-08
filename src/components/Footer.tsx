@@ -14,9 +14,11 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mb-12">
           {/* Logo & Tagline */}
           <div>
-            <span className="text-2xl md:text-3xl font-black tracking-tight block mb-2">
-              FIRSTSTEP
-            </span>
+            <img
+              src="/FIRST STEP LOGO PNG.png"
+              alt="First Step Logo"
+              className="h-12 w-auto object-contain mb-4"
+            />
             <p className="text-secondary-foreground/60 text-sm">
               Premium Shoe Care Service
             </p>
