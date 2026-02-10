@@ -1,10 +1,10 @@
-import { Instagram, Mail, HelpCircle } from "lucide-react";
+import { Instagram, Mail, HelpCircle, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   const footerLinks = [
-    { label: "FAQ", href: "#", icon: HelpCircle },
-    { label: "Contact", href: "#", icon: Mail },
-    { label: "Instagram", href: "#", icon: Instagram },
+    { label: "WhatsApp 1", href: "https://wa.me/6281313255076", icon: MessageCircle }, // Reused MessageCircle or imported it if available, but for now assuming Mail is what was there. Wait, I should check imports.
+    { label: "WhatsApp 2", href: "https://wa.me/6281573499548", icon: MessageCircle },
+    { label: "Instagram", href: "https://instagram.com/firststep.clean", icon: Instagram },
   ];
 
   return (
@@ -25,17 +25,24 @@ const Footer = () => {
           </div>
 
           {/* Links */}
-          <div className="flex flex-wrap gap-6 md:gap-10">
-            {footerLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="flex items-center gap-2 text-sm font-medium text-secondary-foreground/70 hover:text-secondary-foreground transition-colors"
-              >
-                <link.icon size={16} />
-                {link.label}
-              </a>
-            ))}
+          <div className="flex flex-col gap-6 md:gap-10">
+            <div className="flex flex-wrap gap-6 md:gap-10">
+              {footerLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="flex items-center gap-2 text-sm font-medium text-secondary-foreground/70 hover:text-secondary-foreground transition-colors"
+                >
+                  <link.icon size={16} />
+                  {link.label}
+                </a>
+              ))}
+            </div>
+            <div className="text-sm text-secondary-foreground/70">
+              <p className="font-bold mb-2">Visit Us:</p>
+              <p>Jl. Maleer 2 No. 3 (belakang Kampus Piksi Ganesha),</p>
+              <p>Gatot Subroto, Kota Bandung</p>
+            </div>
           </div>
         </div>
 

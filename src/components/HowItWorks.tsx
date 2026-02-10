@@ -13,7 +13,7 @@ const steps = [
         <br />
         <a href="https://wa.me/6281573499548" className="text-primary hover:underline">+62 815-7349-9548</a>
         <br />
-        Instagram DM: @firststep.clean
+        <a href="https://instagram.com/firststep.clean" className="text-primary hover:underline">Instagram DM: @firststep.clean</a>
         <br />
         <br />
         Or drop off directly at our place:

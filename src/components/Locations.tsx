@@ -24,7 +24,7 @@ const Locations = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const phone = "6282126279619"; // Replace with actual WhatsApp number
+    const phone = "6281313255076"; // Updated WhatsApp number
     const text = `Hello First Step, my name is ${formData.name}. I am interested in ${formData.service}. ${formData.message}`;
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
     window.open(url, "_blank");

@@ -2,8 +2,7 @@ import SectionHeader from "./SectionHeader";
 import BeforeAfterSlider from "./BeforeAfterSlider";
 import sneakerDirty from "@/assets/sneaker-dirty.jpg";
 import sneakerClean from "@/assets/sneaker-clean.jpg";
-import suedeFaded from "@/assets/suede-faded.jpg";
-import suedeRestored from "@/assets/suede-restored.jpg";
+
 
 const Gallery = () => {
   return (
@@ -40,28 +39,7 @@ const Gallery = () => {
             </div>
           </div>
 
-          {/* Card 2: Repaint Restoration */}
-          <div className="relative rounded-3xl overflow-hidden aspect-[16/9] md:aspect-[21/9] shadow-2xl shadow-foreground/10">
-            {/* Treatment Badge */}
-            <div className="absolute top-5 left-5 z-20 px-4 py-2 bg-background/95 backdrop-blur-sm rounded-full text-xs font-bold text-foreground tracking-widest uppercase">
-              Premium Repaint
-            </div>
 
-            {/* Before/After Slider */}
-            <BeforeAfterSlider
-              beforeImage={suedeFaded}
-              afterImage={suedeRestored}
-              beforeLabel="Before"
-              afterLabel="After"
-            />
-
-            {/* Caption Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 z-20 p-5 md:p-8 bg-gradient-to-t from-foreground/90 via-foreground/40 to-transparent">
-              <p className="text-background text-sm md:text-lg font-medium max-w-xl">
-                Total color restoration for faded materials.
-              </p>
-            </div>
-          </div>
 
         </div>
       </div>

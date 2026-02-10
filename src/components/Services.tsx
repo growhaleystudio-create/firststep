@@ -101,7 +101,7 @@ const Services = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <a href="https://wa.me/6281234567890" target="_blank" className="btn-pill-primary text-lg px-10 py-4 shadow-xl shadow-blue-900/20">
+          <a href="https://wa.me/6281313255076" target="_blank" className="btn-pill-primary text-lg px-10 py-4 shadow-xl shadow-blue-900/20">
             CUSTOMER REVIEWS
           </a>
         </div>
