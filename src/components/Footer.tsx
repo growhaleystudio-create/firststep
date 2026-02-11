@@ -51,6 +51,9 @@ const Footer = () => {
           <p className="text-md md:text-md font-bold text-secondary-foreground/40 text-center md:text-left">
             © 2026 First Step Inc. All rights reserved.
           </p>
+          <p className="text-md md:text-md font-bold text-secondary-foreground/40 text-center md:text-left">
+            Designed with ❤️ From <a href="https://growhaley.com">Growhaley</a> 🐋.
+          </p>
         </div>
       </div>
     </footer>
