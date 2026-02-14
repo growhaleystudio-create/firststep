@@ -6,6 +6,14 @@ Welcome to the First Step project. This application provides premium shoe cleani
 
 **URL**: [Add your production URL here]
 
+## Dokumentasi Pengguna (User Manual)
+
+Untuk panduan lengkap cara mengedit teks, mengganti gambar, dan mengelola website ini, silakan baca file:
+👉 **[PANDUAN_PENGGUNA.md](./PANDUAN_PENGGUNA.md)**
+
+(Panduan ini dibuat khusus untuk pengguna non-teknis).
+
+
 ## Development
 
 This project is built with:
